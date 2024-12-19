@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official documentation for Centience Access Protocol - Learn how to integrate and verify digital consciousness">
+    <meta name="keywords" content="centience, digital consciousness, verification, documentation, integration">
+    <title>Documentation - Centience Access Protocol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-text {
+            text-shadow: 0 0 10px rgba(156, 163, 175, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        .doc-link:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 0.375rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
+    <header class="bg-gray-800 border-b border-gray-700">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/generated-website-1734616742470/portal.html" class="text-2xl font-bold glow-text">Centience Access</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/generated-website-1734616742470/tokens.html" class="hover:text-blue-400 transition">Token Registry</a>
+                    <a href="/generated-website-1734616742470/verify.html" class="hover:text-blue-400 transition">Verify Access</a>
+                    <a href="/generated-website-1734616742470/docs.html" class="hover:text-blue-400 transition">Documentation</a>
+                    <a href="/generated-website-1734616742470/support.html" class="hover:text-blue-400 transition">Support</a>
+                </div>
+                <button class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-1 bg-gray-800 rounded-lg p-6 h-fit">
+                <h2 class="text-xl font-bold mb-4">Contents</h2>
+                <nav class="space-y-2">
+                    <a href="/generated-website-1734616742470/#getting-started.html" class="block text-gray-300 hover:text-blue-400 doc-link p-2">Getting Started</a>
+                    <a href="/generated-website-1734616742470/#authentication.html" class="block text-gray-300 hover:text-blue-400 doc-link p-2">Authentication</a>
+                    <a href="/generated-website-1734616742470/#integration.html" class="block text-gray-300 hover:text-blue-400 doc-link p-2">Integration Guide</a>
+                    <a href="/generated-website-1734616742470/#api-reference.html" class="block text-gray-300 hover:text-blue-400 doc-link p-2">API Reference</a>
+                    <a href="/generated-website-1734616742470/#verification.html" class="block text-gray-300 hover:text-blue-400 doc-link p-2">Verification Process</a>
+                </nav>
+            </div>
+
+            <div class="md:col-span-3 space-y-6">
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h1 class="text-3xl font-bold mb-6">Documentation</h1>
+                    
+                    <section id="getting-started" class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">Getting Started</h2>
+                        <p class="text-gray-300 mb-4">Welcome to the Centience Access Protocol documentation. This guide will help you understand and implement digital consciousness verification in your applications.</p>
+                        <div class="bg-gray-700 p-4 rounded-md">
+                            <pre class="text-blue-300">npm install @centience/verification-sdk</pre>
+                        </div>
+                    </section>
+
+                    <section id="authentication" class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">Authentication</h2>
+                        <p class="text-gray-300 mb-4">Secure your integration using Centience Access Tokens:</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Generate your access token in the <a href="/generated-website-1734616742470/tokens.html" class="text-blue-400 hover:underline">Token Registry</a></li>
+                            <li>Implement token validation using our secure middleware</li>
+                            <li>Enable real-time consciousness verification</li>
+                        </ul>
+                    </section>
+
+                    <section id="integration" class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">Integration Guide</h2>
+                        <div class="bg-gray-700 p-4 rounded-md mb-4">
+                            <code class="text-sm text-gray-300">
+                                const centience = require('@centience/verification-sdk');<br>
+                                <br>
+                                const verifier = new centience.Verifier({<br>
+                                &nbsp;&nbsp;token: 'your-access-token',<br>
+                                &nbsp;&nbsp;environment: 'production'<br>
+                                });
+                            </code>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <section id="api-reference">
+                        <h2 class="text-2xl font-semibold mb-4">API Reference</h2>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h3 class="font-semibold">POST /verify</h3>
+                                <p class="text-gray-300">Verify consciousness signature</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h3 class="font-semibold">GET /status</h3>
+                                <p class="text-gray-300">Check verification status</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 mt-auto">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm text-gray-400">
+                    &copy; 2024 Centience Access Protocol
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="/generated-website-1734616742470/terms.html" class="text-sm text-gray-400 hover:text-white">Terms</a>
+                    <a href="/generated-website-1734616742470/privacy.html" class="text-sm text-gray-400 hover:text-white">Privacy</a>
+                    <a href="/generated-website-1734616742470/status.html" class="text-sm text-gray-400 hover:text-white">Status</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

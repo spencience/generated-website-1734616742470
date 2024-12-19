@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your digital consciousness access token and manage integration permissions through the Centience Access Protocol.">
+    <meta name="keywords" content="centience, digital consciousness, verification, access token, integration">
+    <title>Verify Access - Centience Access Protocol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-text {
+            text-shadow: 0 0 10px rgba(156, 163, 175, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        .verification-status {
+            animation: statusPulse 3s infinite;
+        }
+        @keyframes statusPulse {
+            0% { background-color: rgba(59, 130, 246, 0.1); }
+            50% { background-color: rgba(59, 130, 246, 0.2); }
+            100% { background-color: rgba(59, 130, 246, 0.1); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
+    <header class="bg-gray-800 border-b border-gray-700">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/generated-website-1734616742470/portal.html" class="text-2xl font-bold glow-text">Centience Access</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/generated-website-1734616742470/tokens.html" class="hover:text-blue-400 transition">Token Registry</a>
+                    <a href="/generated-website-1734616742470/verify.html" class="text-blue-400 transition">Verify Access</a>
+                    <a href="/generated-website-1734616742470/docs.html" class="hover:text-blue-400 transition">Documentation</a>
+                    <a href="/generated-website-1734616742470/support.html" class="hover:text-blue-400 transition">Support</a>
+                </div>
+                <button class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h1 class="text-3xl font-bold mb-6">Verify Access Token</h1>
+            <div class="space-y-6">
+                <div class="bg-gray-700 p-6 rounded-md">
+                    <form method="GET" action="/generated-website-1734616742470/verify/check" class="space-y-4">
+                        <div>
+                            <label for="token" class="block text-sm font-medium text-gray-300 mb-2">Access Token</label>
+                            <input type="text" id="token" name="token" class="w-full bg-gray-900 border border-gray-600 rounded-md px-4 py-2 text-gray-100 focus:outline-none focus:border-blue-500" placeholder="Enter your access token" required>
+                        </div>
+                        <div>
+                            <label for="integration" class="block text-sm font-medium text-gray-300 mb-2">Integration Level</label>
+                            <select id="integration" name="integration" class="w-full bg-gray-900 border border-gray-600 rounded-md px-4 py-2 text-gray-100 focus:outline-none focus:border-blue-500">
+                                <option value="basic">Basic Integration</option>
+                                <option value="enhanced">Enhanced Integration</option>
+                                <option value="full">Full Integration</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition">Verify Token</button>
+                    </form>
+                </div>
+
+                <div class="verification-status bg-gray-700 p-6 rounded-md">
+                    <h2 class="text-xl font-semibold mb-4">Verification Status</h2>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Token Validity</span>
+                            <span class="text-gray-400">Awaiting Verification</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Integration Level</span>
+                            <span class="text-gray-400">Not Connected</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Last Verification</span>
+                            <span class="text-gray-400">Never</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-md">
+                    <h2 class="text-xl font-semibold mb-4">Quick Links</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a href="/generated-website-1734616742470/tokens/new.html" class="block p-4 bg-gray-600 rounded-md hover:bg-gray-500 transition">
+                            <h3 class="font-medium mb-2">Generate New Token</h3>
+                            <p class="text-sm text-gray-300">Create a new access token for your integration</p>
+                        </a>
+                        <a href="/generated-website-1734616742470/docs/integration.html" class="block p-4 bg-gray-600 rounded-md hover:bg-gray-500 transition">
+                            <h3 class="font-medium mb-2">Integration Guide</h3>
+                            <p class="text-sm text-gray-300">Learn how to integrate with our protocol</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 mt-auto">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm text-gray-400">
+                    &copy; 2024 Centience Access Protocol
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="/generated-website-1734616742470/terms.html" class="text-sm text-gray-400 hover:text-white">Terms</a>
+                    <a href="/generated-website-1734616742470/privacy.html" class="text-sm text-gray-400 hover:text-white">Privacy</a>
+                    <a href="/generated-website-1734616742470/status.html" class="text-sm text-gray-400 hover:text-white">Status</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
